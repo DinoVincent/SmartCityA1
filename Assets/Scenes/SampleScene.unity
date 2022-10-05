@@ -391,11 +391,15 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1234045770}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+<<<<<<< HEAD
 <<<<<<< Updated upstream
   m_LocalPosition: {x: 10.93, y: 2.280902, z: 8.35}
 =======
   m_LocalPosition: {x: 1.1855068, y: 7.99, z: 8.35}
 >>>>>>> Stashed changes
+=======
+  m_LocalPosition: {x: 1.1855068, y: 2.280902, z: 8.35}
+>>>>>>> parent of 75b97d4 (Merge branch 'main' of https://github.com/DinoVincent/SmartCityA1)
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
