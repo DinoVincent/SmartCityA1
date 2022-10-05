@@ -509,7 +509,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 43da5547a230bde4b9ea444e4bbcf384, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mouseSensitivity: 100
+  mouseSensitivity: 800
   Playerbody: {fileID: 1369142075}
 --- !u!1 &1369142072
 GameObject:
@@ -561,9 +561,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   entityCamera: {fileID: 963194227}
   controller: {fileID: 1369142073}
-  mouseSensitivity: 200
+  mouseSensitivity: 800
   speed: 10
-  gravity: -12.81
+  gravity: -40
   Jumpheight: 1.7
   Groundcheck: {fileID: 1928491810}
   groundDistance: 0.6
