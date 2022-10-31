@@ -39,16 +39,16 @@ ScriptedImporter:
   spriteData:
     TessellationDetail: 0
     SpriteRect:
-      name: 
+      name: Overlay Icnonen SVG_Tekengebied 1-02Sprite
       originalName: 
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.4997754, y: 0.50016814}
       alignment: 0
       border: {x: 0, y: 0, z: 0, w: 0}
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 0
-        height: 0
+        width: 702
+        height: 1003
       spriteID: a5fe4a6a9f4a5b248aaa697da7f83da4
     PhysicsOutlines: []
