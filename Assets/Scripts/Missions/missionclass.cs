@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [System.Serializable]
-public class Mission
+public class missionclass
 {
-    public enum missionState {Hidden, Ongoing, Completed}
+    public  enum missionState {Hidden, Ongoing, Completed}
 [SerializeField]
  public string Name, description;
  public missionState state=missionState.Hidden;
