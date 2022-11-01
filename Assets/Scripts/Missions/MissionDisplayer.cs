@@ -15,10 +15,10 @@ public class MissionDisplayer : MonoBehaviour
         Transform tsub =  Htext.target.transform;
         for(int i=0; i<HM.subMissions.Length; i++){
             GameObject _svisual = Instantiate(Submission, new Vector3(0,0,0), Quaternion.identity, tsub.transform);
-            _svisual.GetComponent<TMP_Text>().text = HM.subMissions[i].Name;
+            _svisual.GetComponent<Submissiondisplay>().updateTitle(HM.subMissions[i].Name);
             HM.subMissions[i].visual = _svisual;
+            if(HM.subMissions[i].state == missionclass.missionState.Hidden) _svisual.SetActive(false);
         }
-        
         Invoke("refresh", 0.1f);
         return _hvisual;
     }

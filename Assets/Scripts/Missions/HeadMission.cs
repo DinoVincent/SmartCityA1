@@ -27,6 +27,7 @@ public class HeadMission : missionclass
             if(subMissions[i].state == SubMission.missionState.Completed) continue;
             if(subMissions[i].state == SubMission.missionState.Locked){
                 subMissions[i].state=subMissions[i].StillLock(subMissions, i);
+                subMissions[i].forceUIupdate();
             } else if(subMissions[i].state == SubMission.missionState.Ongoing) {
                 subMissions[i].updateMission();
             }

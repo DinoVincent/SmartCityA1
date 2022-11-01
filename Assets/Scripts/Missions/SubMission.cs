@@ -15,14 +15,13 @@ public class SubMission : missionclass
     public MovementMission movement;
 
     public new void updateMission(){
-        if(state == missionState.Ongoing){
             switch(type){
                 case missionType.movement:
                     movement.updateMission(this);
                     break;
             }
             
-        }
+        
 
     }
     public missionState StillLock(SubMission[] list, int index){
@@ -31,7 +30,7 @@ public class SubMission : missionclass
                 return missionState.Ongoing;
            }
             int amountCompleted=0, amountTotal=0;
-        for(int i=index; 0 < index; i--){
+        for(int i=index; 0 <= i; i--){
             Debug.Log(i);
             if(i != index){
                 amountTotal++;
@@ -43,6 +42,14 @@ public class SubMission : missionclass
             if(amountCompleted!=amountTotal) return missionState.Locked;
             else return missionState.Ongoing;
        }
+    public void forceUIupdate(){
+        switch(type){
+                case missionType.movement:
+                    movement.updateUI(this);
+                    break;
+            }
+    }
+
 }
 
 

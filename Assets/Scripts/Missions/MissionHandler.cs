@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Missionhandler : MonoBehaviour
+public class MissionHandler : MonoBehaviour
 {
     public MissionDisplayer msd;
     public HeadMission[] activeMissions;
