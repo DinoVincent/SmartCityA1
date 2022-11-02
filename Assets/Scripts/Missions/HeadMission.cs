@@ -10,6 +10,7 @@ public class HeadMission : missionclass
     public SubMission[] subMissions;
     [System.NonSerialized]
     public bool _displayed=false;
+    public bool _ddisbabled=false;
     
     public new void updateMission(){
 
@@ -33,7 +34,13 @@ public class HeadMission : missionclass
             }
         }
 
-
     }
+
+    public void lockUpdate(){
+            _ddisbabled=true;
+            foreach(SubMission s in subMissions){
+                s.forceUIupdate(this);
+            }
+        }
 
 }

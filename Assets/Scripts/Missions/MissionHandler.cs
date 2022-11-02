@@ -16,6 +16,11 @@ public class MissionHandler : MonoBehaviour
             }
             if(h.state == missionclass.missionState.Ongoing)
                 h.updateMission(); 
+
+            if(h.state == missionclass.missionState.Locked && !h._ddisbabled){
+                h.lockUpdate();
+            }
+
         }
     }
 }

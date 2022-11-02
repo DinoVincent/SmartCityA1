@@ -9,10 +9,11 @@ public class SubMission : missionclass
 
 
     public GameObject visual;
-    public enum missionType {movement}
+    public enum missionType {movement, waypoint}
     public missionType type = missionType.movement;
     public bool lockBefore;
     public MovementMission movement;
+    public WaypointMission waypoint;
 
     public new void updateMission(){
             switch(type){
@@ -42,10 +43,10 @@ public class SubMission : missionclass
             if(amountCompleted!=amountTotal) return missionState.Locked;
             else return missionState.Ongoing;
        }
-    public void forceUIupdate(){
+    public void forceUIupdate(HeadMission hd=null){
         switch(type){
                 case missionType.movement:
-                    movement.updateUI(this);
+                    movement.updateUI(this, hd);
                     break;
             }
     }
