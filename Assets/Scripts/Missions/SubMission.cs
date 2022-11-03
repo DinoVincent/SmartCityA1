@@ -20,6 +20,9 @@ public class SubMission : missionclass
                 case missionType.movement:
                     movement.updateMission(this);
                     break;
+                case missionType.waypoint:
+                    waypoint.updateMission(this);
+                    break;
             }
             
         
@@ -32,14 +35,14 @@ public class SubMission : missionclass
            }
             int amountCompleted=0, amountTotal=0;
         for(int i=index; 0 <= i; i--){
-            Debug.Log(i);
+            //Debug.Log(i);
             if(i != index){
                 amountTotal++;
                 if(list[i].state == missionclass.missionState.Completed) amountCompleted++;
                 if(list[i].lockBefore) break;
             }
         }
-            Debug.Log(amountCompleted+"/"+amountTotal);
+            //Debug.Log(amountCompleted+"/"+amountTotal);
             if(amountCompleted!=amountTotal) return missionState.Locked;
             else return missionState.Ongoing;
        }
@@ -47,6 +50,9 @@ public class SubMission : missionclass
         switch(type){
                 case missionType.movement:
                     movement.updateUI(this, hd);
+                    break;
+                case missionType.waypoint:
+                    waypoint.updateUI(this, hd);
                     break;
             }
     }

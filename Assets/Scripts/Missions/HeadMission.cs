@@ -10,6 +10,7 @@ public class HeadMission : missionclass
     public SubMission[] subMissions;
     [System.NonSerialized]
     public bool _displayed=false;
+    [System.NonSerialized]
     public bool _ddisbabled=false;
     
     public new void updateMission(){
