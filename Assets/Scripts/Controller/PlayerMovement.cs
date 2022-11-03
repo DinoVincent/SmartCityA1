@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.Events;
 using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
@@ -12,7 +13,7 @@ public float gravity = -12.81f;
 public float Jumpheight = 0.3f;
 public static float tpmultiplier = 1f;
 
-
+public static UnityEvent jumpevent;
 Vector3 velocity;
 
 
@@ -22,6 +23,8 @@ public LayerMask groundMask;
 
     void Start(){
         Cursor.lockState = CursorLockMode.Locked;
+        if (jumpevent == null)
+            jumpevent = new UnityEvent();
     }
     void Update()
     {
@@ -45,7 +48,7 @@ public LayerMask groundMask;
 
         if (Input.GetButtonDown("Jump") && isGrounded)
         {
-            
+            jumpevent.Invoke();
             velocity.y = Mathf.Sqrt(Jumpheight * -2f * gravity * tpmultiplier);
         }
 

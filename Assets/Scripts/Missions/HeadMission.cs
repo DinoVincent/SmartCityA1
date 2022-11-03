@@ -6,10 +6,12 @@ using UnityEngine.Events;
 [System.Serializable]
 public class HeadMission : missionclass
 { 
-    public GameObject visual;
+    public GameObject visual, visualdone;
     public SubMission[] subMissions;
     [System.NonSerialized]
     public bool _displayed=false;
+    [System.NonSerialized]
+    public bool _ddisbabled=false;
     
     public new void updateMission(){
 
@@ -33,7 +35,13 @@ public class HeadMission : missionclass
             }
         }
 
-
     }
+
+    public void lockUpdate(){
+            _ddisbabled=true;
+            foreach(SubMission s in subMissions){
+                s.forceUIupdate(this);
+            }
+        }
 
 }

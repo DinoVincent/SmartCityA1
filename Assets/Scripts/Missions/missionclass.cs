@@ -7,7 +7,7 @@ using UnityEngine;
 public class missionclass
 {
 [SerializeField]
- public string Name, description;
+ public string Name;
 public  enum missionState {Hidden, Locked, Ongoing, Completed}
 [Header("Gebruik geen Hidden state op submissies")]
 public missionState state=missionState.Hidden;
