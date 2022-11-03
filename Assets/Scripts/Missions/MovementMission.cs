@@ -9,9 +9,11 @@ public class MovementMission
   
   public KeyCode key;
   public float KeyPressTime;
+  [System.NonSerialized]
   public float _timepressed;
   public bool jumpkey=false;
   bool _event=false;
+  [System.NonSerialized]
   public Submissiondisplay subd;
   private missionclass.missionState _state;
 

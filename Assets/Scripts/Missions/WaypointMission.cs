@@ -4,6 +4,7 @@ using UnityEngine;
 
 [System.Serializable]
 public class WaypointMission {
+  [System.NonSerialized]
     public Submissiondisplay subd;
     public Transform waypoint;
     public float radius;

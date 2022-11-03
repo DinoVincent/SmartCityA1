@@ -7,7 +7,7 @@ public class SubMission : missionclass
 
 {
 
-
+    [System.NonSerialized]
     public GameObject visual;
     public enum missionType {movement, waypoint}
     public missionType type = missionType.movement;

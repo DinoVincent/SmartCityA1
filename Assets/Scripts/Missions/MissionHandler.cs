@@ -6,7 +6,7 @@ public class MissionHandler : MonoBehaviour
 {
     public MissionDisplayer msd;
     public HeadMission[] activeMissions;
-    public List<HeadMission> completedMissions;
+    //public List<HeadMission> completedMissions;
     
 
     void Update(){
