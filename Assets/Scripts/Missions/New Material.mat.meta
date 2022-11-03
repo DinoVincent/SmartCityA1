@@ -1,6 +1,11 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/Scripts/Missions/New Material.mat.meta
 guid: 10a6e5ac2ef9af8409ef6fc74a3f1bb2
 NativeFormatImporter:
+========
+guid: 96cf949b33ab9d647aa0e159130e07d9
+DefaultImporter:
+>>>>>>>> 4c6b55dd205cb7a7c5b0ba2634a7cfad2f9e283a:Assets/Downloaded/-- Models --/Bathroom Sink/Kitchen Sink.blend1.meta
   externalObjects: {}
   mainObjectFileID: 2100000
   userData: 
