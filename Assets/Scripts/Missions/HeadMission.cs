@@ -6,7 +6,7 @@ using UnityEngine.Events;
 [System.Serializable]
 public class HeadMission : missionclass
 { 
-    public GameObject visual;
+    public GameObject visual, visualdone;
     public SubMission[] subMissions;
     [System.NonSerialized]
     public bool _displayed=false;

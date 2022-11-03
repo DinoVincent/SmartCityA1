@@ -7,6 +7,8 @@ public class MissionDisplayer : MonoBehaviour
 {
     [SerializeField]
     private GameObject Mission, Submission, target;
+    [SerializeField]
+    private GameObject missiondone,targetdone;
    
     public GameObject CreateMission(HeadMission HM){
         GameObject _hvisual = Instantiate(Mission, new Vector3(0,0,0), Quaternion.identity, target.transform);
@@ -23,11 +25,19 @@ public class MissionDisplayer : MonoBehaviour
         
         return _hvisual;
     }
-
+    public GameObject MissionDone(HeadMission HM){
+        GameObject _hvisual = Instantiate(missiondone, new Vector3(0,0,0), Quaternion.identity, targetdone.transform);
+        HeadMissionText Htext = _hvisual.GetComponent<HeadMissionText>();
+        Htext.ChangeText(HM.Name);
+        Invoke("refresh", 0.3f);
+        return _hvisual;
+    }
     public void refresh(){
         if(target.activeSelf){
             target.SetActive(false);
             target.SetActive(true);
+            targetdone.SetActive(false);
+            targetdone.SetActive(true);
         }
     }
     
