@@ -3749,8 +3749,7 @@ MonoBehaviour:
         jumpkey: 0
       waypoint:
         waypoint: {fileID: 453824867}
-        radius: 5
-        showRadiusMultiplier: 4
+        radius: 2
     - Name: spring
       state: 1
       type: 0
@@ -3762,7 +3761,6 @@ MonoBehaviour:
       waypoint:
         waypoint: {fileID: 0}
         radius: 0
-        showRadiusMultiplier: 0
 --- !u!4 &514814894
 Transform:
   m_ObjectHideFlags: 0
