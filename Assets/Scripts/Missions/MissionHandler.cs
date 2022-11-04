@@ -1,15 +1,19 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.Events;
 using UnityEngine;
 
 public class MissionHandler : MonoBehaviour
 {
     public MissionDisplayer msd;
     public HeadMission[] activeMissions;
+
+    public UnityEvent EndMissions;
     //public List<HeadMission> completedMissions;
-    
+
 
     void Update(){
+        bool allcompleted=true;
         foreach (HeadMission h in activeMissions){
             bool completed=true;
             if(h.state != missionclass.missionState.Hidden && !h._displayed){
@@ -27,12 +31,14 @@ public class MissionHandler : MonoBehaviour
                 if(s.state != missionclass.missionState.Completed) completed=false;
                 }
             if (completed && h.state != missionclass.missionState.Completed) makeComplete(h);
-
+            if(h.state != missionclass.missionState.Completed) allcompleted=false;
         }
+        if (allcompleted) EndMissions.Invoke();
     }
     void makeComplete(HeadMission h){
         h.state = missionclass.missionState.Completed;
         h.visual.SetActive(false);
         h.visualdone = msd.MissionDone(h);
     }
+    
 }
