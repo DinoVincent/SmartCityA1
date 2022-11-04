@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.UI;
 using TMPro;
 using UnityEngine;
 
@@ -26,9 +27,10 @@ public class MissionDisplayer : MonoBehaviour
         return _hvisual;
     }
     public GameObject MissionDone(HeadMission HM){
+        //VerticalLayoutGroup lay = targetdone.GetComponent<ver
         GameObject _hvisual = Instantiate(missiondone, new Vector3(0,0,0), Quaternion.identity, targetdone.transform);
         HeadMissionText Htext = _hvisual.GetComponent<HeadMissionText>();
-        Htext.ChangeText(HM.Name);
+        Htext.ChangeText(HM.Name, true);
         Invoke("refresh", 0.3f);
         return _hvisual;
     }

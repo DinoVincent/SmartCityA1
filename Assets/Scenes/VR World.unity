@@ -3295,7 +3295,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 2b158e2025c59b64eaba675fb23cd6e3, type: 3}
       propertyPath: m_RootOrder
-      value: 19
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 2b158e2025c59b64eaba675fb23cd6e3, type: 3}
       propertyPath: m_LocalScale.x
@@ -4634,7 +4634,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: fbedf39640a8c4748b25f982da8b1272, type: 3}
       propertyPath: m_RootOrder
-      value: 27
+      value: 28
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: fbedf39640a8c4748b25f982da8b1272, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4697,7 +4697,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 2
-    m_TransformParent: {fileID: 769345866}
+    m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 3452152293744018887, guid: c154b9b82e3e526468b333c4272e3821, type: 3}
       propertyPath: m_AnchorMax.y
@@ -4781,11 +4781,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5181620443448317246, guid: c154b9b82e3e526468b333c4272e3821, type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 17
       objectReference: {fileID: 0}
     - target: {fileID: 5181620443448317246, guid: c154b9b82e3e526468b333c4272e3821, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 100.793495
       objectReference: {fileID: 0}
     - target: {fileID: 5181620443448317246, guid: c154b9b82e3e526468b333c4272e3821, type: 3}
       propertyPath: m_LocalPosition.y
@@ -4793,7 +4793,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5181620443448317246, guid: c154b9b82e3e526468b333c4272e3821, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -101.50203
       objectReference: {fileID: 0}
     - target: {fileID: 5181620443448317246, guid: c154b9b82e3e526468b333c4272e3821, type: 3}
       propertyPath: m_LocalRotation.w
@@ -4801,15 +4801,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5181620443448317246, guid: c154b9b82e3e526468b333c4272e3821, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 5181620443448317246, guid: c154b9b82e3e526468b333c4272e3821, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 5181620443448317246, guid: c154b9b82e3e526468b333c4272e3821, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 5181620443448317246, guid: c154b9b82e3e526468b333c4272e3821, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -5671,6 +5671,8 @@ GameObject:
   m_Component:
   - component: {fileID: 514814894}
   - component: {fileID: 514814893}
+  - component: {fileID: 514814897}
+  - component: {fileID: 514814896}
   - component: {fileID: 514814895}
   m_Layer: 0
   m_Name: MissionHandler
@@ -5734,296 +5736,21 @@ MonoBehaviour:
         Hitmask:
           serializedVersion: 2
           m_Bits: 0
-  - Name: mISS
-    state: 2
-    subMissions:
-    - Name: Ga naar de glijbaan
-      state: 1
-      type: 1
-      lockBefore: 0
-      movement:
-        key: 0
-        KeyPressTime: 0
-        jumpkey: 0
-      waypoint:
-        waypoint: {fileID: 453824867}
-        radius: 2
-      interact:
-        target: {fileID: 0}
-        canvasTooltip: {fileID: 0}
-        RemoveTarget: 0
-        Range: 0
-        Hitmask:
-          serializedVersion: 2
-          m_Bits: 0
-    - Name: spring
-      state: 1
-      type: 0
-      lockBefore: 1
-      movement:
-        key: 32
-        KeyPressTime: 4
-        jumpkey: 1
-      waypoint:
-        waypoint: {fileID: 0}
-        radius: 0
-      interact:
-        target: {fileID: 0}
-        canvasTooltip: {fileID: 0}
-        RemoveTarget: 0
-        Range: 0
-        Hitmask:
-          serializedVersion: 2
-          m_Bits: 0
-  - Name: mISS
-    state: 2
-    subMissions:
-    - Name: Ga naar de glijbaan
-      state: 1
-      type: 1
-      lockBefore: 0
-      movement:
-        key: 0
-        KeyPressTime: 0
-        jumpkey: 0
-      waypoint:
-        waypoint: {fileID: 453824867}
-        radius: 2
-      interact:
-        target: {fileID: 0}
-        canvasTooltip: {fileID: 0}
-        RemoveTarget: 0
-        Range: 0
-        Hitmask:
-          serializedVersion: 2
-          m_Bits: 0
-    - Name: spring
-      state: 1
-      type: 0
-      lockBefore: 1
-      movement:
-        key: 32
-        KeyPressTime: 4
-        jumpkey: 1
-      waypoint:
-        waypoint: {fileID: 0}
-        radius: 0
-      interact:
-        target: {fileID: 0}
-        canvasTooltip: {fileID: 0}
-        RemoveTarget: 0
-        Range: 0
-        Hitmask:
-          serializedVersion: 2
-          m_Bits: 0
-  - Name: mISS
-    state: 1
-    subMissions:
-    - Name: Ga naar de glijbaan
-      state: 1
-      type: 1
-      lockBefore: 0
-      movement:
-        key: 0
-        KeyPressTime: 0
-        jumpkey: 0
-      waypoint:
-        waypoint: {fileID: 453824867}
-        radius: 2
-      interact:
-        target: {fileID: 0}
-        canvasTooltip: {fileID: 0}
-        RemoveTarget: 0
-        Range: 0
-        Hitmask:
-          serializedVersion: 2
-          m_Bits: 0
-    - Name: spring
-      state: 1
-      type: 0
-      lockBefore: 1
-      movement:
-        key: 32
-        KeyPressTime: 4
-        jumpkey: 1
-      waypoint:
-        waypoint: {fileID: 0}
-        radius: 0
-      interact:
-        target: {fileID: 0}
-        canvasTooltip: {fileID: 0}
-        RemoveTarget: 0
-        Range: 0
-        Hitmask:
-          serializedVersion: 2
-          m_Bits: 0
-  - Name: mISS
-    state: 1
-    subMissions:
-    - Name: Ga naar de glijbaan
-      state: 1
-      type: 1
-      lockBefore: 0
-      movement:
-        key: 0
-        KeyPressTime: 0
-        jumpkey: 0
-      waypoint:
-        waypoint: {fileID: 453824867}
-        radius: 2
-      interact:
-        target: {fileID: 0}
-        canvasTooltip: {fileID: 0}
-        RemoveTarget: 0
-        Range: 0
-        Hitmask:
-          serializedVersion: 2
-          m_Bits: 0
-    - Name: spring
-      state: 1
-      type: 0
-      lockBefore: 1
-      movement:
-        key: 32
-        KeyPressTime: 4
-        jumpkey: 1
-      waypoint:
-        waypoint: {fileID: 0}
-        radius: 0
-      interact:
-        target: {fileID: 0}
-        canvasTooltip: {fileID: 0}
-        RemoveTarget: 0
-        Range: 0
-        Hitmask:
-          serializedVersion: 2
-          m_Bits: 0
-  - Name: mISS
-    state: 1
-    subMissions:
-    - Name: Ga naar de glijbaan
-      state: 1
-      type: 1
-      lockBefore: 0
-      movement:
-        key: 0
-        KeyPressTime: 0
-        jumpkey: 0
-      waypoint:
-        waypoint: {fileID: 453824867}
-        radius: 2
-      interact:
-        target: {fileID: 0}
-        canvasTooltip: {fileID: 0}
-        RemoveTarget: 0
-        Range: 0
-        Hitmask:
-          serializedVersion: 2
-          m_Bits: 0
-    - Name: spring
-      state: 1
-      type: 0
-      lockBefore: 1
-      movement:
-        key: 32
-        KeyPressTime: 4
-        jumpkey: 1
-      waypoint:
-        waypoint: {fileID: 0}
-        radius: 0
-      interact:
-        target: {fileID: 0}
-        canvasTooltip: {fileID: 0}
-        RemoveTarget: 0
-        Range: 0
-        Hitmask:
-          serializedVersion: 2
-          m_Bits: 0
-  - Name: mISS
-    state: 1
-    subMissions:
-    - Name: Ga naar de glijbaan
-      state: 1
-      type: 1
-      lockBefore: 0
-      movement:
-        key: 0
-        KeyPressTime: 0
-        jumpkey: 0
-      waypoint:
-        waypoint: {fileID: 453824867}
-        radius: 2
-      interact:
-        target: {fileID: 0}
-        canvasTooltip: {fileID: 0}
-        RemoveTarget: 0
-        Range: 0
-        Hitmask:
-          serializedVersion: 2
-          m_Bits: 0
-    - Name: spring
-      state: 1
-      type: 0
-      lockBefore: 1
-      movement:
-        key: 32
-        KeyPressTime: 4
-        jumpkey: 1
-      waypoint:
-        waypoint: {fileID: 0}
-        radius: 0
-      interact:
-        target: {fileID: 0}
-        canvasTooltip: {fileID: 0}
-        RemoveTarget: 0
-        Range: 0
-        Hitmask:
-          serializedVersion: 2
-          m_Bits: 0
-  - Name: mISS
-    state: 1
-    subMissions:
-    - Name: Ga naar de glijbaan
-      state: 1
-      type: 1
-      lockBefore: 0
-      movement:
-        key: 0
-        KeyPressTime: 0
-        jumpkey: 0
-      waypoint:
-        waypoint: {fileID: 453824867}
-        radius: 2
-      interact:
-        target: {fileID: 0}
-        canvasTooltip: {fileID: 0}
-        RemoveTarget: 0
-        Range: 0
-        Hitmask:
-          serializedVersion: 2
-          m_Bits: 0
-    - Name: spring
-      state: 1
-      type: 0
-      lockBefore: 1
-      movement:
-        key: 32
-        KeyPressTime: 4
-        jumpkey: 1
-      waypoint:
-        waypoint: {fileID: 0}
-        radius: 0
-      interact:
-        target: {fileID: 0}
-        canvasTooltip: {fileID: 0}
-        RemoveTarget: 0
-        Range: 0
-        Hitmask:
-          serializedVersion: 2
-          m_Bits: 0
   EndMissions:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 514814897}
+        m_TargetAssemblyTypeName: SceneSwitcher, Assembly-CSharp
+        m_MethodName: MexicoScene
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!4 &514814894
 Transform:
   m_ObjectHideFlags: 0
@@ -6037,7 +5764,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 24
+  m_RootOrder: 25
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &514814895
 MonoBehaviour:
@@ -6054,6 +5781,30 @@ MonoBehaviour:
   missionMenu: {fileID: 921561326}
   backdrop: {fileID: 2083437816}
   Mission: {fileID: 921561331}
+--- !u!114 &514814896
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 514814892}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c64e68eb93c3ab84f9e04a69eb94f1e0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &514814897
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 514814892}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 16d35ad972b3c5a4aad1562efd9e8540, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &519451006
 GameObject:
   m_ObjectHideFlags: 0
@@ -9166,7 +8917,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6803673569164657021, guid: f69fa572bedaac24b813b2dd34fce7b0, type: 3}
       propertyPath: m_RootOrder
-      value: 34
+      value: 35
       objectReference: {fileID: 0}
     - target: {fileID: 6803673569164657021, guid: f69fa572bedaac24b813b2dd34fce7b0, type: 3}
       propertyPath: m_LocalScale.x
@@ -9873,9 +9624,8 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 935534712}
-  - {fileID: 2115570753}
   m_Father: {fileID: 0}
-  m_RootOrder: 17
+  m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &779095884
 PrefabInstance:
@@ -9960,7 +9710,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 2b158e2025c59b64eaba675fb23cd6e3, type: 3}
       propertyPath: m_RootOrder
-      value: 25
+      value: 26
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 2b158e2025c59b64eaba675fb23cd6e3, type: 3}
       propertyPath: m_LocalScale.x
@@ -11190,7 +10940,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 2b158e2025c59b64eaba675fb23cd6e3, type: 3}
       propertyPath: m_RootOrder
-      value: 22
+      value: 23
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 2b158e2025c59b64eaba675fb23cd6e3, type: 3}
       propertyPath: m_LocalScale.x
@@ -11700,7 +11450,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5396155654188498927, guid: 7771c02e50845c148830a38f099c87ce, type: 3}
       propertyPath: m_RootOrder
-      value: 30
+      value: 31
       objectReference: {fileID: 0}
     - target: {fileID: 5396155654188498927, guid: 7771c02e50845c148830a38f099c87ce, type: 3}
       propertyPath: m_LocalScale.x
@@ -12084,7 +11834,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5396155654188498927, guid: 7771c02e50845c148830a38f099c87ce, type: 3}
       propertyPath: m_RootOrder
-      value: 32
+      value: 33
       objectReference: {fileID: 0}
     - target: {fileID: 5396155654188498927, guid: 7771c02e50845c148830a38f099c87ce, type: 3}
       propertyPath: m_LocalScale.x
@@ -12288,7 +12038,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5396155654188498927, guid: 7771c02e50845c148830a38f099c87ce, type: 3}
       propertyPath: m_RootOrder
-      value: 33
+      value: 34
       objectReference: {fileID: 0}
     - target: {fileID: 5396155654188498927, guid: 7771c02e50845c148830a38f099c87ce, type: 3}
       propertyPath: m_LocalScale.x
@@ -16326,7 +16076,7 @@ Transform:
   - {fileID: 2080235397}
   - {fileID: 648123784}
   m_Father: {fileID: 0}
-  m_RootOrder: 20
+  m_RootOrder: 21
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1273716135
 PrefabInstance:
@@ -17084,7 +16834,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5396155654188498927, guid: 7771c02e50845c148830a38f099c87ce, type: 3}
       propertyPath: m_RootOrder
-      value: 29
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 5396155654188498927, guid: 7771c02e50845c148830a38f099c87ce, type: 3}
       propertyPath: m_LocalScale.x
@@ -19319,7 +19069,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 2b158e2025c59b64eaba675fb23cd6e3, type: 3}
       propertyPath: m_RootOrder
-      value: 23
+      value: 24
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 2b158e2025c59b64eaba675fb23cd6e3, type: 3}
       propertyPath: m_LocalScale.x
@@ -20316,7 +20066,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: fbedf39640a8c4748b25f982da8b1272, type: 3}
       propertyPath: m_RootOrder
-      value: 28
+      value: 29
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: fbedf39640a8c4748b25f982da8b1272, type: 3}
       propertyPath: m_LocalPosition.x
@@ -23833,7 +23583,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 18
+  m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1895731509
 PrefabInstance:
@@ -23894,6 +23644,11 @@ PrefabInstance:
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: e2947d46bde79124c82b000f57bf9ca1, type: 3}
+--- !u!1 &1899693147 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5181620443448317241, guid: c154b9b82e3e526468b333c4272e3821, type: 3}
+  m_PrefabInstance: {fileID: 427048640}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1902389390
 GameObject:
   m_ObjectHideFlags: 0
@@ -24343,7 +24098,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 21
+  m_RootOrder: 22
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1916552127
 GameObject:
@@ -26019,7 +25774,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 2b158e2025c59b64eaba675fb23cd6e3, type: 3}
       propertyPath: m_RootOrder
-      value: 26
+      value: 27
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 2b158e2025c59b64eaba675fb23cd6e3, type: 3}
       propertyPath: m_LocalScale.x
@@ -26241,7 +25996,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5396155654188498927, guid: 7771c02e50845c148830a38f099c87ce, type: 3}
       propertyPath: m_RootOrder
-      value: 31
+      value: 32
       objectReference: {fileID: 0}
     - target: {fileID: 5396155654188498927, guid: 7771c02e50845c148830a38f099c87ce, type: 3}
       propertyPath: m_LocalScale.x
@@ -26608,7 +26363,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 35
+  m_RootOrder: 36
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &2062677589
 PrefabInstance:
@@ -27318,11 +27073,18 @@ PrefabInstance:
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: 0fe65fec31a96cc49a3146a03f035c48, type: 3}
---- !u!4 &2115570753 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 5181620443448317246, guid: c154b9b82e3e526468b333c4272e3821, type: 3}
-  m_PrefabInstance: {fileID: 427048640}
+--- !u!114 &2115570754
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1899693147}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c64e68eb93c3ab84f9e04a69eb94f1e0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2123321480
 GameObject:
   m_ObjectHideFlags: 0

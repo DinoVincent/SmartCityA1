@@ -6,7 +6,12 @@ using UnityEngine;
 public class SceneSwitcher : MonoBehaviour
 {
     public void MexicoScene(){
-        SceneManager.LoadScene(1, LoadSceneMode.Single);
+        Invoke("sceneswitch", 2f);
 
+    }
+
+
+    void sceneswitch(){
+        SceneManager.LoadScene(1, LoadSceneMode.Single);
     }
 }

@@ -36,7 +36,7 @@ public class MovementMission
       if(_timepressed >= KeyPressTime){
           sub.state = missionclass.missionState.Completed;
           _timepressed = KeyPressTime;
-          updateUI(sub);
+          updateUI(sub, null, true);
       }
     }
     if(sub.state != missionclass.missionState.Completed || sub.state != missionclass.missionState.Hidden){
@@ -44,7 +44,7 @@ public class MovementMission
     }
   }
 
-  public void updateUI(SubMission sub, HeadMission hd=null){
+  public void updateUI(SubMission sub, HeadMission hd=null, bool tween =false){
     if (subd == null) subd=sub.visual.GetComponent<Submissiondisplay>();
     if (hd!=null){
       if(hd.state == missionclass.missionState.Locked){
@@ -53,13 +53,16 @@ public class MovementMission
     }
     if(sub.state == missionclass.missionState.Locked)
     subd.updateProgress("Locked", 1f, Submissiondisplay.colorOption.locked);
-    else if(sub.state == missionclass.missionState.Completed)
-    subd.updateProgress("Completed", 1f, Submissiondisplay.colorOption.completed);
+    else if(sub.state == missionclass.missionState.Completed){
+      if(!tween)
+        subd.updateProgress("Completed", 1f, Submissiondisplay.colorOption.completed);
+      else subd.updateProgress("Completed", 1f, Submissiondisplay.colorOption.completed, true);
+    }
     else if(sub.state == missionclass.missionState.Ongoing){
       if(!jumpkey)
       subd.updateProgress(_timepressed.ToString("F1")+"/"+ KeyPressTime.ToString("F1"), (float)(_timepressed/KeyPressTime), Submissiondisplay.colorOption.progressc);
       else
-      subd.updateProgress(_timepressed.ToString()+"/"+ KeyPressTime.ToString(), (float)(_timepressed/KeyPressTime), Submissiondisplay.colorOption.progressc);
+      subd.updateProgress(_timepressed.ToString()+"/"+ KeyPressTime.ToString(), (float)(_timepressed/KeyPressTime), Submissiondisplay.colorOption.progressc, true);
     }
     
   }
