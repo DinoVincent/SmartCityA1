@@ -42479,9 +42479,9 @@ MonoBehaviour:
   entityCamera: {fileID: 963194227}
   controller: {fileID: 1369142073}
   mouseSensitivity: 400
-  speed: 6
+  speed: 4
   gravity: -40
-  Jumpheight: 1.7
+  Jumpheight: 0.5
   Groundcheck: {fileID: 1928491810}
   groundDistance: 0.6
   groundMask:
