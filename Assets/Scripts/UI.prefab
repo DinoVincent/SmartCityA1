@@ -1467,6 +1467,7 @@ GameObject:
   - component: {fileID: 5181620444787887231}
   - component: {fileID: 5181620444787887230}
   - component: {fileID: 5181620444787887225}
+  - component: {fileID: 4064938468420905565}
   m_Layer: 5
   m_Name: UI-MISSIONS
   m_TagString: Untagged
@@ -1557,6 +1558,18 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!225 &4064938468420905565
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5181620444787887227}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &5181620444823797619
 GameObject:
   m_ObjectHideFlags: 0
@@ -1678,7 +1691,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 5181620444158731197}
   m_HandleRect: {fileID: 5181620444158731196}
   m_Direction: 2
-  m_Value: 1
+  m_Value: 0
   m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:

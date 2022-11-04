@@ -6052,6 +6052,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   missionMenu: {fileID: 921561326}
+  backdrop: {fileID: 2083437816}
+  Mission: {fileID: 921561331}
 --- !u!1 &519451006
 GameObject:
   m_ObjectHideFlags: 0
@@ -11077,6 +11079,11 @@ PrefabInstance:
 --- !u!1 &921561326 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5181620444787887227, guid: c154b9b82e3e526468b333c4272e3821, type: 3}
+  m_PrefabInstance: {fileID: 427048640}
+  m_PrefabAsset: {fileID: 0}
+--- !u!225 &921561331 stripped
+CanvasGroup:
+  m_CorrespondingSourceObject: {fileID: 4064938468420905565, guid: c154b9b82e3e526468b333c4272e3821, type: 3}
   m_PrefabInstance: {fileID: 427048640}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &923832409
@@ -26954,6 +26961,11 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 5905604319651664915, guid: ead76e3a9a32299448dfa6d8122b482e, type: 3}
   m_PrefabInstance: {fileID: 2080235396}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &2083437816 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5181620444060244062, guid: c154b9b82e3e526468b333c4272e3821, type: 3}
+  m_PrefabInstance: {fileID: 427048640}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2085722131
 PrefabInstance:
