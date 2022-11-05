@@ -157,9 +157,9 @@ RectTransform:
   m_Father: {fileID: 386913461}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 1, y: 0}
-  m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -50, y: 50}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &107638271
@@ -250,7 +250,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &287560373
 RectTransform:
   m_ObjectHideFlags: 0
@@ -611,7 +611,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 100}
   m_SizeDelta: {x: 500, y: 281.25}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &593667478
@@ -664,7 +664,7 @@ GameObject:
   - component: {fileID: 1031559060}
   - component: {fileID: 1031559059}
   - component: {fileID: 1031559058}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Point missie
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -913,48 +913,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   msd: {fileID: 1295257717}
   activeMissions:
-  - Name: Starting The Game
-    state: 2
-    subMissions: []
-    EventAtEndMission:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 1295257716}
-          m_TargetAssemblyTypeName: CreatePopUp, Assembly-CSharp
-          m_MethodName: createPopUp
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-        - m_Target: {fileID: 1522478826}
-          m_TargetAssemblyTypeName: MissionDisplayer, Assembly-CSharp
-          m_MethodName: refresh
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-        - m_Target: {fileID: 1522478826}
-          m_TargetAssemblyTypeName: MissionDisplayer, Assembly-CSharp
-          m_MethodName: refresh
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
   - Name: Teaching The Basics
     state: 2
     subMissions:
@@ -1102,6 +1060,25 @@ MonoBehaviour:
         Hitmask:
           serializedVersion: 2
           m_Bits: 0
+    - Name: Interact with building
+      state: 1
+      type: 2
+      lockBefore: 0
+      movement:
+        key: 0
+        KeyPressTime: 0
+        jumpkey: 0
+      waypoint:
+        waypoint: {fileID: 1031559061}
+        radius: 6
+      interact:
+        target: {fileID: 1031559057}
+        canvasTooltip: {fileID: 437160976}
+        RemoveTarget: 0
+        Range: 5
+        Hitmask:
+          serializedVersion: 2
+          m_Bits: 128
     EventAtEndMission:
       m_PersistentCalls:
         m_Calls:
@@ -1185,6 +1162,7 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+  cp: {fileID: 1295257716}
 --- !u!4 &1295257714
 Transform:
   m_ObjectHideFlags: 0
@@ -1282,7 +1260,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: -300, y: 0}
+  m_AnchoredPosition: {x: -400, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1001 &1522478823
@@ -1424,17 +1402,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5181620443448317246, guid: c154b9b82e3e526468b333c4272e3821, type: 3}
   m_PrefabInstance: {fileID: 1522478823}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1522478826 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 5181620443988435823, guid: c154b9b82e3e526468b333c4272e3821, type: 3}
-  m_PrefabInstance: {fileID: 1522478823}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a00d8e2479f7fb945be13f707f3b8f01, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1522478827 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5181620444060244062, guid: c154b9b82e3e526468b333c4272e3821, type: 3}
