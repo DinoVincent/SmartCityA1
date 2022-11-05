@@ -5736,21 +5736,65 @@ MonoBehaviour:
         Hitmask:
           serializedVersion: 2
           m_Bits: 0
-  EndMissions:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 514814897}
-        m_TargetAssemblyTypeName: SceneSwitcher, Assembly-CSharp
-        m_MethodName: MexicoScene
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+    EventAtEndMission:
+      m_PersistentCalls:
+        m_Calls: []
+  - Name: mISS
+    state: 2
+    subMissions:
+    - Name: Ga naar de glijbaan
+      state: 1
+      type: 1
+      lockBefore: 0
+      movement:
+        key: 0
+        KeyPressTime: 0
+        jumpkey: 0
+      waypoint:
+        waypoint: {fileID: 453824867}
+        radius: 2
+      interact:
+        target: {fileID: 0}
+        canvasTooltip: {fileID: 0}
+        RemoveTarget: 0
+        Range: 0
+        Hitmask:
+          serializedVersion: 2
+          m_Bits: 0
+    - Name: spring
+      state: 1
+      type: 0
+      lockBefore: 1
+      movement:
+        key: 32
+        KeyPressTime: 4
+        jumpkey: 1
+      waypoint:
+        waypoint: {fileID: 0}
+        radius: 0
+      interact:
+        target: {fileID: 0}
+        canvasTooltip: {fileID: 0}
+        RemoveTarget: 0
+        Range: 0
+        Hitmask:
+          serializedVersion: 2
+          m_Bits: 0
+    EventAtEndMission:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 514814897}
+          m_TargetAssemblyTypeName: SceneSwitcher, Assembly-CSharp
+          m_MethodName: MexicoScene
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!4 &514814894
 Transform:
   m_ObjectHideFlags: 0

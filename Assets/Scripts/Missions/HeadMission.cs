@@ -13,8 +13,10 @@ public class HeadMission : missionclass
     public bool _displayed=false;
     [System.NonSerialized]
     public bool _ddisbabled=false;
+    public UnityEvent EventAtEndMission;
+    bool _didEvent=false;
     
-    public new void updateMission(){
+    public void updateMission(MissionHandler h){
 
         bool done = true;
         foreach (SubMission s in subMissions){
@@ -24,10 +26,19 @@ public class HeadMission : missionclass
             }
         }
 
-        if(done) {state = missionState.Completed; return;}
+        if(done) {
+            if(!_didEvent) { 
+                _didEvent = true;
+                EventAtEndMission.Invoke();
+                h.makeComplete(this); 
+            }
+            state = missionState.Completed; 
+            return;
+        }
 
         for(int i = 0; i<subMissions.Length; i++){
             if(subMissions[i].state == SubMission.missionState.Completed) continue;
+            
             if(subMissions[i].state == SubMission.missionState.Locked){
                 subMissions[i].state=subMissions[i].StillLock(subMissions, i);
                 subMissions[i].forceUIupdate();
@@ -44,5 +55,7 @@ public class HeadMission : missionclass
                 s.forceUIupdate(this);
             }
         }
+
+
 
 }
