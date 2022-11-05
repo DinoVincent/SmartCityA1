@@ -40,7 +40,7 @@ public class MissionHandler : MonoBehaviour
 
     public void MakeNextHiddenToLocked(){
         for(int i =0; i<activeMissions.Length; i++){
-            if(activeMissions[i].state == missionclass.missionState.Hidden){
+            if(activeMissions[i].state == missionclass.missionState.Hidden && !activeMissions[i].Battery){
                 activeMissions[i].state = missionclass.missionState.Locked;
                 break;
             }
@@ -49,7 +49,7 @@ public class MissionHandler : MonoBehaviour
 
     public void MakeNextHiddenToOngoing(){
         for(int i =0; i<activeMissions.Length; i++){
-            if(activeMissions[i].state == missionclass.missionState.Hidden){
+            if(activeMissions[i].state == missionclass.missionState.Hidden && !activeMissions[i].Battery) {
                 activeMissions[i].state = missionclass.missionState.Ongoing;
                 break;
             }
@@ -58,7 +58,16 @@ public class MissionHandler : MonoBehaviour
 
         public void MakeNextLockedToOngoing(){
         for(int i =0; i<activeMissions.Length; i++){
-            if(activeMissions[i].state == missionclass.missionState.Locked){
+            if(activeMissions[i].state == missionclass.missionState.Locked && !activeMissions[i].Battery){
+                activeMissions[i].state = missionclass.missionState.Ongoing;
+                break;
+            }
+        }
+    }
+
+    public void MakeNextHiddenBatteryToGoing(){
+        for(int i =0; i<activeMissions.Length; i++){
+            if(activeMissions[i].state == missionclass.missionState.Hidden && activeMissions[i].Battery){
                 activeMissions[i].state = missionclass.missionState.Ongoing;
                 break;
             }

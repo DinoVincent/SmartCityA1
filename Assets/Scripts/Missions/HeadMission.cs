@@ -8,7 +8,9 @@ public class HeadMission : missionclass
 { 
     [System.NonSerialized]
     public GameObject visual, visualdone;
+    public bool Battery=false;
     public SubMission[] subMissions;
+
     [System.NonSerialized]
     public bool _displayed=false;
     [System.NonSerialized]

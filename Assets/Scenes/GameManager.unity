@@ -899,6 +899,7 @@ MonoBehaviour:
   missionMenu: {fileID: 1522478828}
   backdrop: {fileID: 1522478827}
   Mission: {fileID: 1522478824}
+  lockst: 0
 --- !u!114 &1295257713
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -915,6 +916,7 @@ MonoBehaviour:
   activeMissions:
   - Name: Teaching The Basics
     state: 2
+    Battery: 0
     subMissions:
     - Name: Walk with 'W' for 2 seconds
       state: 1
@@ -935,6 +937,8 @@ MonoBehaviour:
         Hitmask:
           serializedVersion: 2
           m_Bits: 0
+      wait:
+        TimeT: 0
     - Name: Walk with 'A' for 2 seconds
       state: 1
       type: 0
@@ -954,6 +958,8 @@ MonoBehaviour:
         Hitmask:
           serializedVersion: 2
           m_Bits: 0
+      wait:
+        TimeT: 0
     - Name: Walk with 'S' for 2 seconds
       state: 1
       type: 0
@@ -973,6 +979,8 @@ MonoBehaviour:
         Hitmask:
           serializedVersion: 2
           m_Bits: 0
+      wait:
+        TimeT: 0
     - Name: Walk with 'D' for 2 seconds
       state: 1
       type: 0
@@ -992,6 +1000,8 @@ MonoBehaviour:
         Hitmask:
           serializedVersion: 2
           m_Bits: 0
+      wait:
+        TimeT: 0
     - Name: Jump twice
       state: 1
       type: 0
@@ -1011,6 +1021,8 @@ MonoBehaviour:
         Hitmask:
           serializedVersion: 2
           m_Bits: 0
+      wait:
+        TimeT: 0
     EventAtEndMission:
       m_PersistentCalls:
         m_Calls:
@@ -1029,7 +1041,7 @@ MonoBehaviour:
         - m_Target: {fileID: 1295257716}
           m_TargetAssemblyTypeName: CreatePopUp, Assembly-CSharp
           m_MethodName: createPopUp
-          m_Mode: 1
+          m_Mode: 6
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -1040,6 +1052,7 @@ MonoBehaviour:
           m_CallState: 2
   - Name: Go to business building
     state: 1
+    Battery: 0
     subMissions:
     - Name: Find 'name'
       state: 1
@@ -1060,6 +1073,8 @@ MonoBehaviour:
         Hitmask:
           serializedVersion: 2
           m_Bits: 0
+      wait:
+        TimeT: 0
     - Name: Interact with building
       state: 1
       type: 2
@@ -1079,6 +1094,8 @@ MonoBehaviour:
         Hitmask:
           serializedVersion: 2
           m_Bits: 128
+      wait:
+        TimeT: 0
     EventAtEndMission:
       m_PersistentCalls:
         m_Calls:
@@ -1097,7 +1114,7 @@ MonoBehaviour:
         - m_Target: {fileID: 1295257716}
           m_TargetAssemblyTypeName: CreatePopUp, Assembly-CSharp
           m_MethodName: createPopUp
-          m_Mode: 1
+          m_Mode: 6
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -1108,6 +1125,7 @@ MonoBehaviour:
           m_CallState: 2
   - Name: You better dress well
     state: 0
+    Battery: 0
     subMissions:
     - Name: Find the Store
       state: 1
@@ -1128,6 +1146,8 @@ MonoBehaviour:
         Hitmask:
           serializedVersion: 2
           m_Bits: 0
+      wait:
+        TimeT: 0
     - Name: Pickup Tie
       state: 1
       type: 2
@@ -1147,6 +1167,112 @@ MonoBehaviour:
         Hitmask:
           serializedVersion: 2
           m_Bits: 128
+      wait:
+        TimeT: 0
+    EventAtEndMission:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1295257713}
+          m_TargetAssemblyTypeName: MissionHandler, Assembly-CSharp
+          m_MethodName: MakeNextHiddenBatteryToGoing
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 1295257716}
+          m_TargetAssemblyTypeName: CreatePopUp, Assembly-CSharp
+          m_MethodName: createPopUp
+          m_Mode: 6
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 1
+          m_CallState: 2
+  - Name: Fast Depleting Battery!
+    state: 0
+    Battery: 1
+    subMissions:
+    - Name: Battery is running low
+      state: 1
+      type: 3
+      lockBefore: 0
+      movement:
+        key: 0
+        KeyPressTime: 0
+        jumpkey: 0
+      waypoint:
+        waypoint: {fileID: 0}
+        radius: 0
+      interact:
+        target: {fileID: 0}
+        canvasTooltip: {fileID: 0}
+        RemoveTarget: 0
+        Range: 0
+        Hitmask:
+          serializedVersion: 2
+          m_Bits: 0
+      wait:
+        TimeT: 12
+    EventAtEndMission:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1295257713}
+          m_TargetAssemblyTypeName: MissionHandler, Assembly-CSharp
+          m_MethodName: MakeNextHiddenBatteryToGoing
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 1295257716}
+          m_TargetAssemblyTypeName: CreatePopUp, Assembly-CSharp
+          m_MethodName: createPopUp
+          m_Mode: 6
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 1
+          m_CallState: 2
+  - Name: Critical Battery
+    state: 0
+    Battery: 1
+    subMissions:
+    - Name: Battery is critically low, Headset will shut down momentarily
+      state: 1
+      type: 3
+      lockBefore: 0
+      movement:
+        key: 0
+        KeyPressTime: 0
+        jumpkey: 0
+      waypoint:
+        waypoint: {fileID: 0}
+        radius: 0
+      interact:
+        target: {fileID: 0}
+        canvasTooltip: {fileID: 0}
+        RemoveTarget: 0
+        Range: 0
+        Hitmask:
+          serializedVersion: 2
+          m_Bits: 0
+      wait:
+        TimeT: 8
     EventAtEndMission:
       m_PersistentCalls:
         m_Calls:
@@ -1204,6 +1330,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PopUP: {fileID: 6037014910378028368, guid: 3de034ec2cf1f144fb93acc058a50817, type: 3}
+  alertpre: {fileID: 6037014910378028368, guid: f1d715787825174408fa2a642756fa8c, type: 3}
   startpoint: {fileID: 1448590437}
   endpoint: {fileID: 1678383210}
   target: {fileID: 112920016}
@@ -1271,6 +1398,10 @@ PrefabInstance:
     serializedVersion: 2
     m_TransformParent: {fileID: 1295257714}
     m_Modifications:
+    - target: {fileID: 4124611282965453209, guid: c154b9b82e3e526468b333c4272e3821, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5181620443448317241, guid: c154b9b82e3e526468b333c4272e3821, type: 3}
       propertyPath: m_Name
       value: UI

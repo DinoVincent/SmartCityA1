@@ -9,6 +9,8 @@ public class Tab : MonoBehaviour
     bool _open;
     [SerializeField]
     CanvasGroup Mission;
+    [SerializeField]
+    bool lockst;
     
 
 
@@ -19,7 +21,7 @@ public class Tab : MonoBehaviour
 
     void Update()
     {
-
+        if(lockst) return;
         if (Input.GetKeyDown(KeyCode.Tab))
         {
             if (_open)
@@ -43,5 +45,16 @@ public class Tab : MonoBehaviour
                 _open=true;
             }
         }
+    }
+    public void switchLockOpeningState(){
+        if(lockst) lockst = false; else lockst = true;
+    }
+    public void voidForceClose(){
+        Mission.alpha=1f;
+        Cursor.lockState = CursorLockMode.Locked;
+        LeanTween.alphaCanvas(Mission, 0f, .2f);
+        LeanTween.scale(backdrop, new Vector3(.5f,.5f,.5f), .15f);
+        _open=false;
+
     }
 }

@@ -40,9 +40,9 @@ public class WaypointMission {
             if(Distance <= radius*2){
                 float displayDis = ((radius*2-Distance)/radius);
                 //Debug.Log(displayDis);
-                subd.updateProgress("To-Do", displayDis, Submissiondisplay.colorOption.progressc);
+                subd.updateProgress("TO-DO", displayDis, Submissiondisplay.colorOption.progressc);
             } else {
-                subd.updateProgress("To-Do", 0f, Submissiondisplay.colorOption.progressc);
+                subd.updateProgress("TO-DO", 0f, Submissiondisplay.colorOption.progressc);
             }
 
         }
