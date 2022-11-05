@@ -265,13 +265,18 @@ RectTransform:
   m_Children:
   - {fileID: 386913461}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 540, y: 347.5}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &383155569 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5181620445405794357, guid: c154b9b82e3e526468b333c4272e3821, type: 3}
+  m_PrefabInstance: {fileID: 1522478823}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &386913457
 GameObject:
   m_ObjectHideFlags: 0
@@ -377,6 +382,108 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!1 &437160976 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2932908523536999078, guid: c154b9b82e3e526468b333c4272e3821, type: 3}
+  m_PrefabInstance: {fileID: 1522478823}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &443434684
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 443434685}
+  - component: {fileID: 443434688}
+  - component: {fileID: 443434687}
+  - component: {fileID: 443434686}
+  m_Layer: 7
+  m_Name: Point store
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &443434685
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 443434684}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 1, z: -32}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &443434686
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 443434684}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!23 &443434687
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 443434684}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 10a6e5ac2ef9af8409ef6fc74a3f1bb2, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &443434688
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 443434684}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &561235518
 GameObject:
   m_ObjectHideFlags: 0
@@ -453,6 +560,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 561235518}
   m_CullTransparentMesh: 1
+--- !u!1 &592857929 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5181620444091530861, guid: c154b9b82e3e526468b333c4272e3821, type: 3}
+  m_PrefabInstance: {fileID: 1522478823}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &592857933 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5181620444091530851, guid: c154b9b82e3e526468b333c4272e3821, type: 3}
+  m_PrefabInstance: {fileID: 1522478823}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 592857929}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59f8146938fff824cb5fd77236b75775, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &593667476
 GameObject:
   m_ObjectHideFlags: 0
@@ -626,6 +749,73 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1084492141
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1084492144}
+  - component: {fileID: 1084492143}
+  - component: {fileID: 1084492142}
+  m_Layer: 0
+  m_Name: EventSystem
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1084492142
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1084492141}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f231c4fb786f3946a6b90b886c48677, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_HorizontalAxis: Horizontal
+  m_VerticalAxis: Vertical
+  m_SubmitButton: Submit
+  m_CancelButton: Cancel
+  m_InputActionsPerSecond: 10
+  m_RepeatDelay: 0.5
+  m_ForceModuleActive: 0
+--- !u!114 &1084492143
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1084492141}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76c392e42b5098c458856cdf6ecaaaa1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_FirstSelected: {fileID: 0}
+  m_sendNavigationEvents: 1
+  m_DragThreshold: 10
+--- !u!4 &1084492144
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1084492141}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1134251027
 GameObject:
   m_ObjectHideFlags: 0
@@ -686,6 +876,7 @@ GameObject:
   - component: {fileID: 1295257712}
   - component: {fileID: 1295257715}
   - component: {fileID: 1295257716}
+  - component: {fileID: 1295257717}
   m_Layer: 0
   m_Name: MissionHandler
   m_TagString: Untagged
@@ -720,7 +911,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 33bf49e1d6e3e524082b86deaf9a7473, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  msd: {fileID: 1522478826}
+  msd: {fileID: 1295257717}
   activeMissions:
   - Name: Starting The Game
     state: 2
@@ -731,6 +922,30 @@ MonoBehaviour:
         - m_Target: {fileID: 1295257716}
           m_TargetAssemblyTypeName: CreatePopUp, Assembly-CSharp
           m_MethodName: createPopUp
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 1522478826}
+          m_TargetAssemblyTypeName: MissionDisplayer, Assembly-CSharp
+          m_MethodName: refresh
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 1522478826}
+          m_TargetAssemblyTypeName: MissionDisplayer, Assembly-CSharp
+          m_MethodName: refresh
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -890,9 +1105,77 @@ MonoBehaviour:
     EventAtEndMission:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 1134251029}
-          m_TargetAssemblyTypeName: GameSceneManager, Assembly-CSharp
-          m_MethodName: LoadMexico
+        - m_Target: {fileID: 1295257713}
+          m_TargetAssemblyTypeName: MissionHandler, Assembly-CSharp
+          m_MethodName: MakeNextHiddenToOngoing
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 1295257716}
+          m_TargetAssemblyTypeName: CreatePopUp, Assembly-CSharp
+          m_MethodName: createPopUp
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - Name: You better dress well
+    state: 0
+    subMissions:
+    - Name: Find the Store
+      state: 1
+      type: 1
+      lockBefore: 0
+      movement:
+        key: 0
+        KeyPressTime: 0
+        jumpkey: 0
+      waypoint:
+        waypoint: {fileID: 443434685}
+        radius: 6
+      interact:
+        target: {fileID: 0}
+        canvasTooltip: {fileID: 0}
+        RemoveTarget: 0
+        Range: 0
+        Hitmask:
+          serializedVersion: 2
+          m_Bits: 0
+    - Name: Pickup Tie
+      state: 1
+      type: 2
+      lockBefore: 1
+      movement:
+        key: 0
+        KeyPressTime: 0
+        jumpkey: 0
+      waypoint:
+        waypoint: {fileID: 0}
+        radius: 0
+      interact:
+        target: {fileID: 443434684}
+        canvasTooltip: {fileID: 437160976}
+        RemoveTarget: 1
+        Range: 5
+        Hitmask:
+          serializedVersion: 2
+          m_Bits: 128
+    EventAtEndMission:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1295257715}
+          m_TargetAssemblyTypeName: SceneSwitcher, Assembly-CSharp
+          m_MethodName: MexicoScene
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -916,7 +1199,7 @@ Transform:
   m_Children:
   - {fileID: 1522478825}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1295257715
 MonoBehaviour:
@@ -948,6 +1231,24 @@ MonoBehaviour:
   target: {fileID: 112920016}
   canvasg: {fileID: 112920020}
   mis: {fileID: 1295257713}
+--- !u!114 &1295257717
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1295257711}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a00d8e2479f7fb945be13f707f3b8f01, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Mission: {fileID: 8168310646378210238, guid: 312178f66b673084b9977d0606718512, type: 3}
+  Submission: {fileID: 4282472190021393777, guid: e8a1ff3201361d54db219a640f145c3e, type: 3}
+  target: {fileID: 592857929}
+  targett: {fileID: 592857933}
+  missiondone: {fileID: 8499101236637966946, guid: d15a89d6bb9d051429be7d0c3e8c3f81, type: 3}
+  targetdone: {fileID: 383155569}
 --- !u!1 &1448590436
 GameObject:
   m_ObjectHideFlags: 0

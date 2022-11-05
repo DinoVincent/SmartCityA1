@@ -324,8 +324,8 @@ GameObject:
   - component: {fileID: 8499101236637966940}
   - component: {fileID: 8499101236637966937}
   - component: {fileID: 8499101236637966942}
+  - component: {fileID: 7841142817585886645}
   - component: {fileID: 8499101236637966943}
-  - component: {fileID: 49347149481620351}
   m_Layer: 5
   m_Name: MissionDone
   m_TagString: Untagged
@@ -414,6 +414,19 @@ MonoBehaviour:
   m_ChildScaleWidth: 0
   m_ChildScaleHeight: 0
   m_ReverseArrangement: 0
+--- !u!114 &7841142817585886645
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8499101236637966946}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8855e84a999cb9c489174f2f642798aa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textv: {fileID: 8499101234988332346}
 --- !u!114 &8499101236637966943
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -428,17 +441,3 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_HorizontalFit: 0
   m_VerticalFit: 2
---- !u!114 &49347149481620351
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8499101236637966946}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f334c685dab762f4982e00c93a0a230b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  textv: {fileID: 8499101234988332346}
-  target: {fileID: 0}

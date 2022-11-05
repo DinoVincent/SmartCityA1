@@ -33,7 +33,7 @@ public class MissionHandler : MonoBehaviour
         h.visualdone = msd.MissionDone(h);
     }
 
-    public void MakeNextVisibleToLocked(){
+    public void MakeNextHiddenToLocked(){
         for(int i =0; i<activeMissions.Length; i++){
             if(activeMissions[i].state == missionclass.missionState.Hidden){
                 activeMissions[i].state = missionclass.missionState.Locked;
@@ -42,7 +42,7 @@ public class MissionHandler : MonoBehaviour
         }
     }
 
-    public void MakeNextVisibleToOngoing(){
+    public void MakeNextHiddenToOngoing(){
         for(int i =0; i<activeMissions.Length; i++){
             if(activeMissions[i].state == missionclass.missionState.Hidden){
                 activeMissions[i].state = missionclass.missionState.Ongoing;

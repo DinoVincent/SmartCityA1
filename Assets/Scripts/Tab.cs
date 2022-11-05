@@ -35,6 +35,8 @@ public class Tab : MonoBehaviour
             {   missionMenu.SetActive(false);
                 Mission.alpha=0f;
                 missionMenu.SetActive(true);
+                missionMenu.SetActive(false);
+                missionMenu.SetActive(true);
                 Cursor.lockState = CursorLockMode.None;
                 LeanTween.alphaCanvas(Mission, 1f, .2f);
                 LeanTween.scale(backdrop, new Vector3(1,1,1), .15f);
