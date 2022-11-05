@@ -17,7 +17,7 @@ RenderSettings:
   m_Fog: 0
   m_FogColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
   m_FogMode: 3
-  m_FogDensity: 0.01
+  m_FogDensity: 1
   m_LinearFogStart: 0
   m_LinearFogEnd: 300
   m_AmbientSkyColor: {r: 0.212, g: 0.227, b: 0.259, a: 1}
@@ -26,7 +26,7 @@ RenderSettings:
   m_AmbientIntensity: 1
   m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
-  m_SkyboxMaterial: {fileID: 10304, guid: 0000000000000000f000000000000000, type: 0}
+  m_SkyboxMaterial: {fileID: 2100000, guid: b2e5a8c7b5c1750438ff01b2b620f17a, type: 2}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.12731749, g: 0.13414757, b: 0.1210787, a: 1}
+  m_IndirectSpecularColor: {r: 0.37193757, g: 0.30882192, b: 0.35094404, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_LightingSettings: {fileID: 0}
+  m_LightingSettings: {fileID: 4890085278179872738, guid: c7936190d625cc344a1490e28d2ac7ff, type: 2}
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -877,6 +877,7 @@ GameObject:
   - component: {fileID: 1295257715}
   - component: {fileID: 1295257716}
   - component: {fileID: 1295257717}
+  - component: {fileID: 1295257718}
   m_Layer: 0
   m_Name: MissionHandler
   m_TagString: Untagged
@@ -1172,9 +1173,9 @@ MonoBehaviour:
     EventAtEndMission:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 1295257713}
-          m_TargetAssemblyTypeName: MissionHandler, Assembly-CSharp
-          m_MethodName: MakeNextHiddenBatteryToGoing
+        - m_Target: {fileID: 1295257718}
+          m_TargetAssemblyTypeName: ChooseUI, Assembly-CSharp
+          m_MethodName: OpenUI
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -1183,18 +1184,6 @@ MonoBehaviour:
             m_FloatArgument: 0
             m_StringArgument: 
             m_BoolArgument: 0
-          m_CallState: 2
-        - m_Target: {fileID: 1295257716}
-          m_TargetAssemblyTypeName: CreatePopUp, Assembly-CSharp
-          m_MethodName: createPopUp
-          m_Mode: 6
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 1
           m_CallState: 2
   - Name: Fast Depleting Battery!
     state: 0
@@ -1354,6 +1343,24 @@ MonoBehaviour:
   targett: {fileID: 592857933}
   missiondone: {fileID: 8499101236637966946, guid: d15a89d6bb9d051429be7d0c3e8c3f81, type: 3}
   targetdone: {fileID: 383155569}
+--- !u!114 &1295257718
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1295257711}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 74bb6f65703cda54496597fdb20bfd5a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  canvas: {fileID: 1732433657}
+  canvasgr: {fileID: 1522478826}
+  missionHandler: {fileID: 1295257713}
+  pop: {fileID: 0}
+  sc: {fileID: 1295257715}
+  tab: {fileID: 1295257712}
 --- !u!1 &1448590436
 GameObject:
   m_ObjectHideFlags: 0
@@ -1398,6 +1405,38 @@ PrefabInstance:
     serializedVersion: 2
     m_TransformParent: {fileID: 1295257714}
     m_Modifications:
+    - target: {fileID: 867787803186559986, guid: c154b9b82e3e526468b333c4272e3821, type: 3}
+      propertyPath: m_Name
+      value: Look
+      objectReference: {fileID: 0}
+    - target: {fileID: 2003067851555297420, guid: c154b9b82e3e526468b333c4272e3821, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2003067851555297420, guid: c154b9b82e3e526468b333c4272e3821, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2003067851555297420, guid: c154b9b82e3e526468b333c4272e3821, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1295257718}
+    - target: {fileID: 2003067851555297420, guid: c154b9b82e3e526468b333c4272e3821, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2003067851555297420, guid: c154b9b82e3e526468b333c4272e3821, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Stay
+      objectReference: {fileID: 0}
+    - target: {fileID: 2003067851555297420, guid: c154b9b82e3e526468b333c4272e3821, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: ChooseUI, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 2003067851555297420, guid: c154b9b82e3e526468b333c4272e3821, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 4124611282965453209, guid: c154b9b82e3e526468b333c4272e3821, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -1514,6 +1553,38 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -0.000061035156
       objectReference: {fileID: 0}
+    - target: {fileID: 7814589574111299808, guid: c154b9b82e3e526468b333c4272e3821, type: 3}
+      propertyPath: m_Name
+      value: Stay
+      objectReference: {fileID: 0}
+    - target: {fileID: 8515835875171360063, guid: c154b9b82e3e526468b333c4272e3821, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8515835875171360063, guid: c154b9b82e3e526468b333c4272e3821, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8515835875171360063, guid: c154b9b82e3e526468b333c4272e3821, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1295257718}
+    - target: {fileID: 8515835875171360063, guid: c154b9b82e3e526468b333c4272e3821, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8515835875171360063, guid: c154b9b82e3e526468b333c4272e3821, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Look
+      objectReference: {fileID: 0}
+    - target: {fileID: 8515835875171360063, guid: c154b9b82e3e526468b333c4272e3821, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: ChooseUI, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 8515835875171360063, guid: c154b9b82e3e526468b333c4272e3821, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 5181620445043253076, guid: c154b9b82e3e526468b333c4272e3821, type: 3}
@@ -1531,6 +1602,11 @@ CanvasGroup:
 --- !u!4 &1522478825 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5181620443448317246, guid: c154b9b82e3e526468b333c4272e3821, type: 3}
+  m_PrefabInstance: {fileID: 1522478823}
+  m_PrefabAsset: {fileID: 0}
+--- !u!225 &1522478826 stripped
+CanvasGroup:
+  m_CorrespondingSourceObject: {fileID: 3624161251163688458, guid: c154b9b82e3e526468b333c4272e3821, type: 3}
   m_PrefabInstance: {fileID: 1522478823}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1522478827 stripped
@@ -1668,3 +1744,8 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
+--- !u!1 &1732433657 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4124611282965453209, guid: c154b9b82e3e526468b333c4272e3821, type: 3}
+  m_PrefabInstance: {fileID: 1522478823}
+  m_PrefabAsset: {fileID: 0}

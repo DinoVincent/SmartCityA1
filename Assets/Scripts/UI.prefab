@@ -753,6 +753,7 @@ GameObject:
   - component: {fileID: 999216123024443510}
   - component: {fileID: 8330036976996784143}
   - component: {fileID: 7030803426930605707}
+  - component: {fileID: 3624161251163688458}
   m_Layer: 5
   m_Name: TIE
   m_TagString: Untagged
@@ -843,6 +844,18 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!225 &3624161251163688458
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4124611282965453209}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &5181620443448317241
 GameObject:
   m_ObjectHideFlags: 0

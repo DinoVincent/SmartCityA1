@@ -46,8 +46,10 @@ public class Tab : MonoBehaviour
             }
         }
     }
-    public void switchLockOpeningState(){
-        if(lockst) lockst = false; else lockst = true;
+    public void switchLockOpeningState(bool overrideswitch=false, bool lockstate=false){
+        if(!overrideswitch){
+            if(lockst) lockst = false; else lockst = true;
+        } else {lockst = lockstate;}
     }
     public void voidForceClose(){
         Mission.alpha=1f;
