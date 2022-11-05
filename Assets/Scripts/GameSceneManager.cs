@@ -19,9 +19,14 @@ public class GameSceneManager : MonoBehaviour
         LoadingScreen.SetActive(false);
     }
     List<AsyncOperation> scenesLoading = new List<AsyncOperation>();
-    public void LoadMexico (){
+    public void LoadMexico(){
+        StartCoroutine(loadmex());
+    }
+    public IEnumerator loadmex (){
         LoadingScreen.SetActive(true);
         Missionhandler.SetActive(false);
+
+        yield return new WaitForSeconds(1f);
         scenesLoading.Add(SceneManager.UnloadSceneAsync(1));
         scenesLoading.Add(SceneManager.LoadSceneAsync(2, LoadSceneMode.Additive));
         StartCoroutine(GetProgress());
