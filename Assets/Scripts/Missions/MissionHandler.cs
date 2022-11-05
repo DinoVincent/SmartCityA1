@@ -66,6 +66,7 @@ public class MissionHandler : MonoBehaviour
     }
 
     public void MakeNextHiddenBatteryToGoing(){
+        Debug.Log("JAAAAAAAAAAA");
         for(int i =0; i<activeMissions.Length; i++){
             if(activeMissions[i].state == missionclass.missionState.Hidden && activeMissions[i].Battery){
                 activeMissions[i].state = missionclass.missionState.Ongoing;

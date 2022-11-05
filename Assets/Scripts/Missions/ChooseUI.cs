@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.UI;
 using UnityEngine;
 
 public class ChooseUI : MonoBehaviour
@@ -10,6 +11,7 @@ public class ChooseUI : MonoBehaviour
     public CreatePopUp pop;
     public SceneSwitcher sc;
     public Tab tab;
+    public Button but1, but2;
     public void OpenUI(){
         Cursor.lockState = CursorLockMode.None;
         tab.switchLockOpeningState(true, true);
@@ -20,17 +22,30 @@ public class ChooseUI : MonoBehaviour
     }
 
     public void Stay(){
+        disableButton();
         Cursor.lockState = CursorLockMode.Locked;
         LeanTween.alphaCanvas(canvasgr, 0f, .2f);
         tab.switchLockOpeningState(true, false);
         missionHandler.MakeNextHiddenBatteryToGoing();
         pop.createPopUp(true);
-
+        Invoke("Hidecanvas", .2f);
         
+    }
+    void disableButton(){
+        but1.interactable = false;
+        but2.interactable = false;
+    }
+    void Hidecanvas(){
+        canvas.SetActive(false);
+
     }
 
     public void Look(){
+        disableButton();
         Cursor.lockState = CursorLockMode.Locked;
+         LeanTween.alphaCanvas(canvasgr, 0f, .2f);
         sc.MexicoScene();
+        tab.switchLockOpeningState(true, false);
+        Invoke("Hidecanvas", .2f);
     }
 }
