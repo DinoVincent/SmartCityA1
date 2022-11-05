@@ -29,8 +29,10 @@ public class HeadMission : missionclass
         if(done) {
             if(!_didEvent) { 
                 _didEvent = true;
+                state = missionState.Completed; 
                 EventAtEndMission.Invoke();
                 h.makeComplete(this); 
+                return;
             }
             state = missionState.Completed; 
             return;

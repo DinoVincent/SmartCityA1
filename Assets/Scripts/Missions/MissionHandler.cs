@@ -32,5 +32,32 @@ public class MissionHandler : MonoBehaviour
         h.visual.SetActive(false);
         h.visualdone = msd.MissionDone(h);
     }
+
+    public void MakeNextVisibleToLocked(){
+        for(int i =0; i<activeMissions.Length; i++){
+            if(activeMissions[i].state == missionclass.missionState.Hidden){
+                activeMissions[i].state = missionclass.missionState.Locked;
+                break;
+            }
+        }
+    }
+
+    public void MakeNextVisibleToOngoing(){
+        for(int i =0; i<activeMissions.Length; i++){
+            if(activeMissions[i].state == missionclass.missionState.Hidden){
+                activeMissions[i].state = missionclass.missionState.Ongoing;
+                break;
+            }
+        }
+    }
+
+        public void MakeNextLockedToOngoing(){
+        for(int i =0; i<activeMissions.Length; i++){
+            if(activeMissions[i].state == missionclass.missionState.Locked){
+                activeMissions[i].state = missionclass.missionState.Ongoing;
+                break;
+            }
+        }
+    }
     
 }

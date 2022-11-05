@@ -13,6 +13,7 @@ public class Tab : MonoBehaviour
 
 
     void Start(){
+        missionMenu.SetActive(false);
         if(missionMenu.activeSelf) _open = true; else _open = false;
     }
 

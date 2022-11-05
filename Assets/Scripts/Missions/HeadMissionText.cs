@@ -11,7 +11,7 @@ public class HeadMissionText : MonoBehaviour
     private VerticalLayoutGroup layoutgroup;
     void Awake(){
         layoutgroup =this.GetComponentInParent<VerticalLayoutGroup>();
-        Debug.Log(layoutgroup);
+        //Debug.Log(layoutgroup);
     }
     public void ChangeText(string text, bool animate=false){
         

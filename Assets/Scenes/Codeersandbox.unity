@@ -1388,7 +1388,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1523703593
 Transform:
   m_ObjectHideFlags: 0
@@ -1478,21 +1478,9 @@ MonoBehaviour:
         Hitmask:
           serializedVersion: 2
           m_Bits: 128
-  EndMissions:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1523703596}
-        m_TargetAssemblyTypeName: SceneSwitcher, Assembly-CSharp
-        m_MethodName: MexicoScene
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+    EventAtEndMission:
+      m_PersistentCalls:
+        m_Calls: []
 --- !u!114 &1523703595
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1506,6 +1494,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   missionMenu: {fileID: 392026436}
+  backdrop: {fileID: 0}
+  Mission: {fileID: 0}
 --- !u!114 &1523703596
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1667,7 +1657,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5181620443448317241, guid: c154b9b82e3e526468b333c4272e3821, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5181620443448317246, guid: c154b9b82e3e526468b333c4272e3821, type: 3}
       propertyPath: m_RootOrder
@@ -1715,23 +1705,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5181620444091530850, guid: c154b9b82e3e526468b333c4272e3821, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 380
       objectReference: {fileID: 0}
     - target: {fileID: 5181620444158731196, guid: c154b9b82e3e526468b333c4272e3821, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5181620444158731196, guid: c154b9b82e3e526468b333c4272e3821, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5181620445003036279, guid: c154b9b82e3e526468b333c4272e3821, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5181620445003036279, guid: c154b9b82e3e526468b333c4272e3821, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5181620445043253079, guid: c154b9b82e3e526468b333c4272e3821, type: 3}
       propertyPath: m_IsActive
@@ -1743,7 +1733,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5181620445405794378, guid: c154b9b82e3e526468b333c4272e3821, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 100
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects:
