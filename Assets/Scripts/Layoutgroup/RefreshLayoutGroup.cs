@@ -8,7 +8,7 @@ public class RefreshLayoutGroup : MonoBehaviour
     public LayoutGroup layoutGroup;
 
     void Start(){
-        StartCoroutine(LateStart(2f));
+        StartCoroutine(LateStart(1f));
     }
 
      
