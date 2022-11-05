@@ -26,7 +26,7 @@ public class GameSceneManager : MonoBehaviour
         LoadingScreen.SetActive(true);
         Missionhandler.SetActive(false);
 
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(2f);
         scenesLoading.Add(SceneManager.UnloadSceneAsync(1));
         scenesLoading.Add(SceneManager.LoadSceneAsync(2, LoadSceneMode.Additive));
         StartCoroutine(GetProgress());
@@ -49,7 +49,7 @@ public class GameSceneManager : MonoBehaviour
                 yield return null;
             }
         }
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(3f);
         LoadingScreen.SetActive(false);
         Missionhandler.SetActive(true);
 

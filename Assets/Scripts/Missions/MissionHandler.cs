@@ -6,11 +6,15 @@ public class MissionHandler : MonoBehaviour
 {
     public MissionDisplayer msd;
     public HeadMission[] activeMissions;
+    public CreatePopUp cp;
 
     
     
     //public List<HeadMission> completedMissions;
 
+    void Start(){
+        cp.createPopUp();
+    }
 
     void Update(){
         foreach (HeadMission h in activeMissions){
@@ -27,6 +31,7 @@ public class MissionHandler : MonoBehaviour
         }
 
     }
+
     public void makeComplete(HeadMission h){
         h.state = missionclass.missionState.Completed;
         h.visual.SetActive(false);
