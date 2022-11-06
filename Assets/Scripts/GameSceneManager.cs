@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.SceneManagement;
+using UnityEngine.Rendering;
 using UnityEngine.UI;
 using UnityEngine;
 
@@ -11,10 +12,14 @@ public class GameSceneManager : MonoBehaviour
     public GameObject Missionhandler;
     float totalprogress;
     public Image bar;
+    public Material skyboxNewYork;
+    public Material skyboxMexico;
     void Awake()
     {
         instance= this;
+        RenderSettings.skybox = skyboxNewYork;
         SceneManager.LoadSceneAsync(1, LoadSceneMode.Additive);
+        
         Missionhandler.SetActive(true);
         LoadingScreen.SetActive(false);
     }
@@ -27,6 +32,7 @@ public class GameSceneManager : MonoBehaviour
         Missionhandler.SetActive(false);
 
         yield return new WaitForSeconds(2f);
+        RenderSettings.skybox = skyboxMexico;
         scenesLoading.Add(SceneManager.UnloadSceneAsync(1));
         scenesLoading.Add(SceneManager.LoadSceneAsync(2, LoadSceneMode.Additive));
         StartCoroutine(GetProgress());

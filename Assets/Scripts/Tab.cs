@@ -53,7 +53,6 @@ public class Tab : MonoBehaviour
     }
     public void voidForceClose(){
         Mission.alpha=1f;
-        Cursor.lockState = CursorLockMode.Locked;
         LeanTween.alphaCanvas(Mission, 0f, .2f);
         LeanTween.scale(backdrop, new Vector3(.5f,.5f,.5f), .15f);
         _open=false;
