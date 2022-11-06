@@ -874,6 +874,8 @@ MonoBehaviour:
   LoadingScreen: {fileID: 287560372}
   Missionhandler: {fileID: 1295257711}
   bar: {fileID: 561235520}
+  skyboxNewYork: {fileID: 2100000, guid: b2e5a8c7b5c1750438ff01b2b620f17a, type: 2}
+  skyboxMexico: {fileID: 2100000, guid: ed5ccd60e02bbd34eb101ecccea3de01, type: 2}
 --- !u!1 &1295257711
 GameObject:
   m_ObjectHideFlags: 0
