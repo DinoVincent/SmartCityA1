@@ -10,18 +10,31 @@ public class GameSceneManager : MonoBehaviour
     public static GameSceneManager instance;
     public GameObject LoadingScreen;
     public GameObject Missionhandler;
+    public MissionHandler ms;
+    public CreatePopUp cpu;
     float totalprogress;
     public Image bar;
     public Material skyboxNewYork;
     public Material skyboxMexico;
+    public GameObject MissionTargetsNY, MissionTargetsMexico;
     void Awake()
     {
         instance= this;
         RenderSettings.skybox = skyboxNewYork;
-        SceneManager.LoadSceneAsync(1, LoadSceneMode.Additive);
-        
         Missionhandler.SetActive(true);
         LoadingScreen.SetActive(false);
+
+        MissionTargetsNY.SetActive(true);
+        MissionTargetsMexico.SetActive(false);
+        
+        
+        SceneManager.LoadSceneAsync(1, LoadSceneMode.Additive);
+        
+        
+      
+    }
+    void Start(){
+        postprocessingManager.instance.startPostprocessing(postprocessingManager.profiles.profileNewYork);
     }
     List<AsyncOperation> scenesLoading = new List<AsyncOperation>();
     public void LoadMexico(){
@@ -31,10 +44,15 @@ public class GameSceneManager : MonoBehaviour
         LoadingScreen.SetActive(true);
         Missionhandler.SetActive(false);
 
+        MissionTargetsNY.SetActive(false);
+        MissionTargetsMexico.SetActive(true);
+        postprocessingManager.instance.startPostprocessing(postprocessingManager.profiles.profileMexico);
         yield return new WaitForSeconds(2f);
         RenderSettings.skybox = skyboxMexico;
+        postprocessingManager.instance.resetwhite();
         scenesLoading.Add(SceneManager.UnloadSceneAsync(1));
         scenesLoading.Add(SceneManager.LoadSceneAsync(2, LoadSceneMode.Additive));
+        
         StartCoroutine(GetProgress());
 
     }
@@ -58,6 +76,14 @@ public class GameSceneManager : MonoBehaviour
         yield return new WaitForSeconds(3f);
         LoadingScreen.SetActive(false);
         Missionhandler.SetActive(true);
+        StartCoroutine(mexicoMissie());
 
+    }
+
+    public IEnumerator mexicoMissie(){
+        yield return new WaitForSeconds(1f);
+        ms.MakeNextHiddenToOngoing();
+        cpu.createPopUp();
+        
     }
 }
