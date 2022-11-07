@@ -32,7 +32,7 @@ public class postprocessingManager : MonoBehaviour
     }
 
    public void startEnd(){
-        LeanTween.value(this.gameObject, whiteScreen, 0, 120f, 2f);
+        LeanTween.value(this.gameObject, whiteScreen, 0, 120f, 4f);
    }
 
 
