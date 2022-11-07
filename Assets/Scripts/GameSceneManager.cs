@@ -16,6 +16,7 @@ public class GameSceneManager : MonoBehaviour
     public Image bar;
     public Material skyboxNewYork;
     public Material skyboxMexico;
+    public Tab tb;
     public GameObject MissionTargetsNY, MissionTargetsMexico;
     void Awake()
     {
@@ -35,6 +36,7 @@ public class GameSceneManager : MonoBehaviour
     }
     void Start(){
         postprocessingManager.instance.startPostprocessing(postprocessingManager.profiles.profileNewYork);
+       tb.voidForceOpen();
     }
     List<AsyncOperation> scenesLoading = new List<AsyncOperation>();
     public void LoadMexico(){

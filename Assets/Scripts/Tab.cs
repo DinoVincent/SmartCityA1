@@ -14,10 +14,10 @@ public class Tab : MonoBehaviour
     
 
 
-    void Start(){
-        missionMenu.SetActive(false);
-        if(missionMenu.activeSelf) _open = true; else _open = false;
-    }
+   /* void Start(){
+        //missionMenu.SetActive(false);
+        //if(missionMenu.activeSelf) _open = true; else _open = false;
+    }*/
 
     void Update()
     {
@@ -55,6 +55,15 @@ public class Tab : MonoBehaviour
         Mission.alpha=1f;
         LeanTween.alphaCanvas(Mission, 0f, .2f);
         LeanTween.scale(backdrop, new Vector3(.5f,.5f,.5f), .15f);
+        _open=false;
+
+    }
+
+     public void voidForceOpen(){
+        Mission.alpha=0f;
+        missionMenu.transform.localScale = new Vector3(.5f,.5f,.5f);
+        missionMenu.SetActive(false);
+        missionMenu.SetActive(true);
         _open=false;
 
     }
