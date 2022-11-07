@@ -28,7 +28,7 @@ public class CreatePopUp : MonoBehaviour
             }
         }
 
-
+        GeneralAudioScript.instance.playAudio(0);
         pop.GetComponent<ChangeText>().textv.text = mis.activeMissions[currentRecent].Name;
         LeanTween.alphaCanvas(canvasg, 1f, .2f);
         LeanTween.move(pop, endpoint, .2f);
