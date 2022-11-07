@@ -844,7 +844,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: e74e3cc57ff6f53419029fb1c3beb277, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.103
+  m_Volume: 0.541
   m_Pitch: 1.22
   Loop: 1
   Mute: 0
@@ -853,7 +853,7 @@ AudioSource:
   Priority: 135
   DopplerLevel: 1
   MinDistance: 0.1
-  MaxDistance: 3
+  MaxDistance: 5
   Pan2D: 0
   rolloffMode: 1
   BypassEffects: 0
@@ -31029,7 +31029,7 @@ AudioListener:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
-  m_Enabled: 1
+  m_Enabled: 0
 --- !u!20 &963194227
 Camera:
   m_ObjectHideFlags: 0
@@ -42373,7 +42373,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh69110
+  m_Name: pb_Mesh23722
   serializedVersion: 11
   m_SubMeshes:
   - serializedVersion: 2
@@ -52830,7 +52830,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 3b0ecd2e4242fac4c91f8b3fe739c7c3, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.199
+  m_Volume: 0.231
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -52839,7 +52839,7 @@ AudioSource:
   Priority: 80
   DopplerLevel: 1
   MinDistance: 1
-  MaxDistance: 10
+  MaxDistance: 34
   Pan2D: 0
   rolloffMode: 1
   BypassEffects: 0
@@ -58142,7 +58142,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh70056
+  m_Name: pb_Mesh24672
   serializedVersion: 11
   m_SubMeshes:
   - serializedVersion: 2
@@ -59763,7 +59763,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh70006
+  m_Name: pb_Mesh24622
   serializedVersion: 11
   m_SubMeshes:
   - serializedVersion: 2
@@ -60849,7 +60849,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1865247881}
-  - component: {fileID: 1865247882}
   m_Layer: 0
   m_Name: -----PLAYER-----
   m_TagString: Untagged
@@ -60873,14 +60872,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!81 &1865247882
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1865247880}
-  m_Enabled: 1
 --- !u!1001 &1868321061
 PrefabInstance:
   m_ObjectHideFlags: 0
