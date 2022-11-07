@@ -9,13 +9,14 @@ public class SubMission : missionclass
 
     [System.NonSerialized]
     public GameObject visual;
-    public enum missionType {movement, waypoint, interact, Wait}
+    public enum missionType {movement, waypoint, interact, Wait, call}
     public missionType type = missionType.movement;
     public bool lockBefore;
     public MovementMission movement;
     public WaypointMission waypoint;
     public InteractMission interact;
     public WaitMission wait;
+    public callevent call;
 
     public new void updateMission(){
             switch(type){
@@ -30,6 +31,9 @@ public class SubMission : missionclass
                     break;
                 case missionType.Wait:
                     wait.updateMission(this);
+                    break;
+                case missionType.call:
+                    call.updateMission(this);
                     break;
             }
             
@@ -68,7 +72,9 @@ public class SubMission : missionclass
                 case missionType.Wait:
                     wait.updateUI(this,hd);
                     break;
-                
+                case missionType.call:
+                    call.updateUI(this,hd);
+                    break;
             }
     }
 

@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.Events;
 using UnityEngine;
 
 public class MissionHandler : MonoBehaviour
@@ -7,12 +8,13 @@ public class MissionHandler : MonoBehaviour
     public MissionDisplayer msd;
     public HeadMission[] activeMissions;
     public CreatePopUp cp;
-
+    public UnityEvent call;
     
     
     //public List<HeadMission> completedMissions;
 
     void Start(){
+        if(call == null) call = new UnityEvent();
         cp.createPopUp();
     }
 
@@ -66,7 +68,6 @@ public class MissionHandler : MonoBehaviour
     }
 
     public void MakeNextHiddenBatteryToGoing(){
-        Debug.Log("JAAAAAAAAAAA");
         for(int i =0; i<activeMissions.Length; i++){
             if(activeMissions[i].state == missionclass.missionState.Hidden && activeMissions[i].Battery){
                 activeMissions[i].state = missionclass.missionState.Ongoing;

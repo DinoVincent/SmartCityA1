@@ -579,7 +579,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh90444
+  m_Name: pb_Mesh230998
   serializedVersion: 11
   m_SubMeshes:
   - serializedVersion: 2
@@ -1241,7 +1241,7 @@ MonoBehaviour:
   sharedProfile: {fileID: 11400000, guid: ad63dd535a679714cb2a663c472f19d7, type: 2}
   isGlobal: 1
   blendDistance: 0
-  weight: 1
+  weight: 0.2
   priority: 0
 --- !u!114 &1459470051
 MonoBehaviour:
@@ -1353,6 +1353,7 @@ MonoBehaviour:
   activeMissions:
   - Name: Missie go brr
     state: 2
+    Battery: 0
     subMissions:
     - Name: Spring 2 keer bitch van me
       state: 1
@@ -1373,6 +1374,8 @@ MonoBehaviour:
         Hitmask:
           serializedVersion: 2
           m_Bits: 0
+      wait:
+        TimeT: 0
     - Name: Loop naar waypoint sletje
       state: 1
       type: 1
@@ -1392,6 +1395,8 @@ MonoBehaviour:
         Hitmask:
           serializedVersion: 2
           m_Bits: 0
+      wait:
+        TimeT: 0
     - Name: Interact Sletje
       state: 1
       type: 2
@@ -1411,9 +1416,12 @@ MonoBehaviour:
         Hitmask:
           serializedVersion: 2
           m_Bits: 128
+      wait:
+        TimeT: 0
     EventAtEndMission:
       m_PersistentCalls:
         m_Calls: []
+  cp: {fileID: 0}
 --- !u!114 &1523703595
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1429,6 +1437,7 @@ MonoBehaviour:
   missionMenu: {fileID: 392026436}
   backdrop: {fileID: 0}
   Mission: {fileID: 0}
+  lockst: 0
 --- !u!114 &1523703596
 MonoBehaviour:
   m_ObjectHideFlags: 0
