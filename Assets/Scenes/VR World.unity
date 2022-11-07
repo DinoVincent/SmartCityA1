@@ -15251,6 +15251,7 @@ GameObject:
   - component: {fileID: 935534712}
   - component: {fileID: 935534714}
   - component: {fileID: 935534713}
+  - component: {fileID: 935534715}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -15317,6 +15318,14 @@ MonoBehaviour:
   groundMask:
     serializedVersion: 2
     m_Bits: 64
+--- !u!81 &935534715
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 935534711}
+  m_Enabled: 1
 --- !u!4 &936270238 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7954808679591437646, guid: a96ec426591c1a74b90aa643726f600d, type: 3}
