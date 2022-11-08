@@ -7,7 +7,7 @@ public class callevent
 {
   [System.NonSerialized]
     public Submissiondisplay subd;
-    public static bool call=true;
+    public static bool call=false;
  public void updateMission(SubMission sub){
     if(sub.state == missionclass.missionState.Ongoing){
         if(call) sub.state = missionclass.missionState.Completed;

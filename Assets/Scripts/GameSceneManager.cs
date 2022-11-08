@@ -28,7 +28,7 @@ public class GameSceneManager : MonoBehaviour
         MissionTargetsNY.SetActive(true);
         MissionTargetsMexico.SetActive(false);
         
-        
+        staticgamesaver.allowMovement = true;
         SceneManager.LoadSceneAsync(1, LoadSceneMode.Additive);
         
         
@@ -45,13 +45,14 @@ public class GameSceneManager : MonoBehaviour
     public IEnumerator loadmex (){
         LoadingScreen.SetActive(true);
         Missionhandler.SetActive(false);
-
+        staticgamesaver.allowMovement = false;
         MissionTargetsNY.SetActive(false);
         MissionTargetsMexico.SetActive(true);
         postprocessingManager.instance.startPostprocessing(postprocessingManager.profiles.profileMexico);
         yield return new WaitForSeconds(2f);
         RenderSettings.skybox = skyboxMexico;
         postprocessingManager.instance.resetwhite();
+        CreatePopUp.audioplay = false;
         scenesLoading.Add(SceneManager.UnloadSceneAsync(1));
         scenesLoading.Add(SceneManager.LoadSceneAsync(2, LoadSceneMode.Additive));
         
@@ -76,8 +77,10 @@ public class GameSceneManager : MonoBehaviour
             }
         }
         yield return new WaitForSeconds(3f);
+        staticgamesaver.allowMovement = true;
         LoadingScreen.SetActive(false);
         Missionhandler.SetActive(true);
+        
         StartCoroutine(mexicoMissie());
 
     }
@@ -86,6 +89,15 @@ public class GameSceneManager : MonoBehaviour
         yield return new WaitForSeconds(1f);
         ms.MakeNextHiddenToOngoing();
         cpu.createPopUp();
+        
+    }
+    public void Endgame(){
+        StartCoroutine(delayEND());
+    }
+    IEnumerator delayEND(){
+        yield return new WaitForSeconds(4f);
+            SceneManager.LoadSceneAsync(3, LoadSceneMode.Additive);
+            SceneManager.UnloadSceneAsync(2);
         
     }
 }

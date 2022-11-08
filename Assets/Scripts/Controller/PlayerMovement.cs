@@ -28,6 +28,7 @@ public LayerMask groundMask;
     }
     void Update()
     {
+        if(!staticgamesaver.allowMovement) return;
         bool isGrounded = Physics.CheckSphere(Groundcheck.position, groundDistance, groundMask);
         if (isGrounded && velocity.y < 0)
         {

@@ -10,6 +10,7 @@ public class CreatePopUp : MonoBehaviour
     public Transform startpoint, endpoint, target;
     public CanvasGroup canvasg;
     public MissionHandler mis;
+    public static bool audioplay=true;
 
     
 
@@ -27,7 +28,7 @@ public class CreatePopUp : MonoBehaviour
                 currentRecent = i; break;
             }
         }
-
+        if (audioplay)
         GeneralAudioScript.instance.playAudio(0);
         pop.GetComponent<ChangeText>().textv.text = mis.activeMissions[currentRecent].Name;
         LeanTween.alphaCanvas(canvasg, 1f, .2f);
