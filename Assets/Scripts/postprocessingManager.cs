@@ -32,6 +32,11 @@ public class postprocessingManager : MonoBehaviour
     }
 
    public void startEnd(){
+        StartCoroutine(startEndNumerator());
+   }
+
+   public  IEnumerator startEndNumerator(){
+        yield return new WaitForSeconds (.15f);
         LeanTween.value(this.gameObject, whiteScreen, 0, 120f, 4f);
    }
 
