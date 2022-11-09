@@ -39,6 +39,7 @@ public class Phoneyguy : MonoBehaviour
     }
 
     public void openPhone(){
+        Cursor.lockState = CursorLockMode.None;
         Missiontab.voidForceClose();
         missionUI.SetActive(false);
         Missiontab.switchLockOpeningState(true, true);
@@ -50,6 +51,10 @@ public class Phoneyguy : MonoBehaviour
         Missiontab.switchLockOpeningState(true, false);
         else Missiontab.switchLockOpeningState(true, true);
         phoneUI.SetActive(false);
+        Cursor.lockState = CursorLockMode.Locked;
+        {
+            
+        };
 
     }   
 

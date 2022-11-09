@@ -12,13 +12,22 @@ public class ChooseUI : MonoBehaviour
     public SceneSwitcher sc;
     public Tab tab;
     public Button but1, but2;
-    public void OpenUI(){
+
+    IEnumerator delay(){
+        yield return new WaitForSeconds(3f);
+        GeneralAudioScript.instance.playAudio(1);
+        yield return new WaitForSeconds(2.5f);
         Cursor.lockState = CursorLockMode.None;
         tab.switchLockOpeningState(true, true);
         tab.voidForceClose();
         canvasgr.alpha=0f;
         canvas.SetActive(true);
         LeanTween.alphaCanvas(canvasgr, 1f, .2f);
+    }
+
+
+    public void OpenUI(){
+        StartCoroutine(delay());
     }
 
     public void Stay(){

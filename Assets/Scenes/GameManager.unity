@@ -3456,6 +3456,12 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 3310048258199491566, guid: c154b9b82e3e526468b333c4272e3821, type: 3}
+      propertyPath: m_text
+      value: 'Loud noise detected.
+
+        Do you want to leave or stay in the metaverse?'
+      objectReference: {fileID: 0}
     - target: {fileID: 4124611282965453209, guid: c154b9b82e3e526468b333c4272e3821, type: 3}
       propertyPath: m_IsActive
       value: 0
