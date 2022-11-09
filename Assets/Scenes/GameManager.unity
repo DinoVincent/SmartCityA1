@@ -3079,7 +3079,7 @@ MonoBehaviour:
     subMissions:
     - Name: Call 911
       state: 1
-      type: 1
+      type: 4
       lockBefore: 0
       movement:
         key: 0
@@ -4825,10 +4825,22 @@ PrefabInstance:
     - target: {fileID: 8745596981336500467, guid: 7a5c8fc93dfc3634bb81f43fb65834ae, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1295257711}
+      objectReference: {fileID: 1295257720}
     - target: {fileID: 8745596981336500467, guid: 7a5c8fc93dfc3634bb81f43fb65834ae, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8745596981336500467, guid: 7a5c8fc93dfc3634bb81f43fb65834ae, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Call
+      objectReference: {fileID: 0}
+    - target: {fileID: 8745596981336500467, guid: 7a5c8fc93dfc3634bb81f43fb65834ae, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: Phoneyguy, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 8745596981336500467, guid: 7a5c8fc93dfc3634bb81f43fb65834ae, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 8770936959699136828, guid: 7a5c8fc93dfc3634bb81f43fb65834ae, type: 3}
       propertyPath: m_AnchorMax.y
